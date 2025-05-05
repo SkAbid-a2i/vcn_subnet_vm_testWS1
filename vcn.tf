@@ -1,9 +1,9 @@
-# VCN Resource
+# VCN Resource with updated DNS label
 resource "oci_core_virtual_network" "my_vcn_abid_vm" {
   compartment_id = var.compartment_ocid
   cidr_block     = var.vcn_cidr
   display_name   = "MyVCNAbid(vm)"
-  dns_label      = "myVcnAbid(vm)"
+  dns_label      = "myvcnabidvm"  # Corrected DNS label (all lowercase, no parentheses)
 }
 
 # Public Subnet Resource
