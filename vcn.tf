@@ -1,3 +1,4 @@
+# Create VCN
 resource "oci_core_virtual_network" "my_vcn_abid_vm" {
   compartment_id = var.compartment_ocid
   cidr_block     = var.vcn_cidr
@@ -50,7 +51,7 @@ resource "oci_core_subnet" "subnet_public" {
   display_name        = "Public Subnet"
   route_table_id      = oci_core_route_table.public_route_table.id
   security_list_ids   = [oci_core_security_list.public_security_list.id]
-  availability_domain = "Uocm:PHX-AD-1"  # Replace with correct AD
+  availability_domain = "Uocm:AP-DCC-GZ-AD-1"  # Correct availability domain name
 }
 
 # Private Subnet
@@ -61,5 +62,5 @@ resource "oci_core_subnet" "subnet_private" {
   display_name        = "Private Subnet"
   route_table_id      = oci_core_route_table.private_route_table.id
   security_list_ids   = [oci_core_security_list.private_security_list.id]
-  availability_domain = "Uocm:PHX-AD-1"  # Replace with correct AD
+  availability_domain = "Uocm:AP-DCC-GZ-AD-1"  # Correct availability domain name
 }
