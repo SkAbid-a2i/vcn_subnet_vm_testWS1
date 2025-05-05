@@ -54,10 +54,6 @@ resource "oci_core_security_list" "public_security_list" {
   display_name   = "Public Security List"
 }
 
-# Outputs
-output "vcn_id" {
-  value = oci_core_virtual_network.my_vcn_abid_vm.id
-}
 
 output "subnet_public_id" {
   value = oci_core_subnet.subnet_public.id
